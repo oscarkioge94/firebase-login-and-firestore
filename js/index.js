@@ -12,6 +12,7 @@ document.getElementById("submit").onclick = function(){
         mail: email,
         passkey:password,
       })
+      window.location.href = "home.html"
     // ...
   })
   .catch((error) => {
