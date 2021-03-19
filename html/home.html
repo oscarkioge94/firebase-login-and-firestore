@@ -6,21 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
 
 </head>
 
 <body>
+    <div class="main">
+        <h1>Bookings</h1>
+        <button id="signOut">Signout</button>
+        <p>Welcome</p>
+        <p id="userName"></p>
 
-    <input id="title" type="title" placeholder="Enter a title">
-    <input id="blog" type="blog" placeholder="Enter your blog">
-    <button id="submit">Signup</button>
+        <label for="">Select Flight</label>
+        <select name="">
+            <option value=""></option>
+            <option value="Jambo jet">Jambo jet</option>
+            <option value="Kenya airways">Kenya airways</option>
+            <option value="silver stone">silver stone/option>
+        </select>
+        <br>
+        <br>
+        <div class="middle">
+            <input type="date" id="selectDate">
+            <input type="time" id="SelectTime">
+            <input type="number" id="passengers" placeholder="type in number of passengers">
+        </div>
+
+        <label for="">Seat number</label>
+        <select name="" id="seatNo">
+            <option value=""></option>
+            <option value="A1">A1</option>
+            <option value="B1">B1</option>
+            <option value="C1">C1</option>
+        </select>
+        <button id="bookFlight">BookFlight</button>
+    </div>
+
+
+
 
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
-    <script src="/js/home.js"></script>
     <script src="/js/firebase.js"></script>
+    <script src="/js/home.js"></script>
 </body>
 
 </html>

@@ -11,12 +11,24 @@ document.getElementById("submit").onclick = function(){
 
     
 
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+  firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in 
     var user = userCredential.user;
-    
+    firebase.firestore().collection("users").doc().set({
+      identity:name,
+      phone:number,
+      mail: email,
+      passkey:password,
+      userId: user.uid
+      
+    })
+    .then(()=>{
       window.location.href = "home.html"
+    })
+     
+    
+     
     // ...
   })
   .catch((error) => {
@@ -24,12 +36,8 @@ document.getElementById("submit").onclick = function(){
     var errorMessage = error.message;
     // ..
   });
-  firebase.firestore().collection("users").doc().set({
-    identity:name,
-    phone:number,
-    mail: email,
-    passkey:password,
-  })
+
+  
 
     
    

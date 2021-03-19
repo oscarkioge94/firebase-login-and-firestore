@@ -1,0 +1,36 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 400px;
+  margin-top: 50px;
+}
+.section input {
+  margin-bottom: 10px;
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+}
+
+#submit {
+  width: 150px;
+  margin-left: 40px;
+  background-color: tomato;
+  border-radius: 10px;
+  height: 35px;
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.middle input {
+  margin-bottom: 20px;
+}
+#bookFlight {
+  background-color: tomato;
+}
+#hurray {
+  display: none;
+  color: red;
+}
